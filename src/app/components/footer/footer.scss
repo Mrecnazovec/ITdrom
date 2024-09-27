@@ -1,0 +1,33 @@
+footer {
+	color: #fff;
+	padding-bottom: var(--padding-base);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		.flex {
+			display: flex;
+			gap: 15px;
+			ul {
+				list-style-type: none;
+				padding-left: 0;
+				margin: 0;
+				li {
+					&:not(:last-child){
+						margin-bottom: 15px;
+					}
+				}
+			}
+			.soc1als {
+				display: flex;
+				gap: 15px;
+				height: fit-content;
+
+				img {
+					height: fit-content;
+				}
+			}
+		}
+	}
+}

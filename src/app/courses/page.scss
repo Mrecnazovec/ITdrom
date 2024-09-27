@@ -1,0 +1,72 @@
+@import '/src/app/styles/media';
+@import '/src/app/styles/mixins';
+
+.courses {
+	padding-block: var(--padding-base);
+	&-section {
+		.container {
+			background-color: var(--color-secondary);
+			padding-block: var(--padding-base);
+			border-radius: var(--border-radius-small);
+
+			.listCourses {
+				margin-left: auto;
+				margin-right: auto;
+
+				@include tablet {
+				}
+				@include mobile {
+				}
+
+				.articleLink {
+					border-radius: var(--border-radius);
+					position: relative;
+				}
+
+				article {
+					display: flex;
+					align-items: center;
+					gap: var(--margin-base);
+					box-shadow: rgba(0, 0, 0, 1) 0px 3px 6px 0px;
+					padding: calc(var(--padding-base) / 2);
+					border-radius: var(--border-radius);
+					transition: all var(--transition-duration) linear;
+					position: relative;
+					overflow: hidden;
+					margin-bottom: var(--margin-base);
+
+					@include mobile {
+						flex-direction: column;
+
+						img {
+							width: 200px;
+							height: 200px;
+						}
+					}
+
+					img {
+						margin-bottom: var(--margin-base);
+					}
+
+					.title {
+						margin-bottom: calc(var(--margin-base) / 2);
+					}
+					.text {
+						margin-bottom: calc(var(--margin-base) / 2);
+					}
+					.price {
+						margin-bottom: calc(var(--margin-base) / 2);
+					}
+					.desc {
+						margin-bottom: calc(var(--margin-base) / 2);
+					}
+					button {
+						color: #fff;
+					}
+
+			
+				}
+			}
+		}
+	}
+}

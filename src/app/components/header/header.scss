@@ -1,0 +1,64 @@
+@import '/src/app/styles/media';
+@import '/src/app/styles/mixins';
+
+header {
+	padding-top: calc(var(--margin-base));
+	color: #fff;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mobile-s {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+		}
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		gap: calc(var(--margin-base) * 2);
+		list-style-type: none;
+
+		li {
+			span {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+					width: 0;
+					height: 2px;
+					background: var(--color-gradient);
+					transition: all var(--transition-duration) linear;
+				}
+			}
+
+			@include hover {
+				span {
+					position: relative;
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+		@include mobile {
+			gap: 15px;
+		}
+		@include mobile-s {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+
+
+
+}

@@ -1,0 +1,25 @@
+@import '/src/app/styles/_mixins';
+@import '/src/app/styles/media';
+
+.btn {
+	@include reset-button;
+	cursor: pointer;
+	background-color: var(--color-secondary);
+
+	padding: 10px 15px;
+	border-radius: var(--border-radius-small);
+
+	span {
+		background: linear-gradient(90deg,#ff6068,#feb14b);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+
+		&::after {
+			width: 0 !important;
+		}
+	}
+
+	@include hover {
+		background-color: hsla(0, 2%, 65%, 0.07);
+	}
+}

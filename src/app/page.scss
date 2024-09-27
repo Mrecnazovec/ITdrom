@@ -1,0 +1,219 @@
+@import '/src/app/styles/media';
+@import '/src/app/styles/mixins';
+
+.homeSection {
+	padding-block: calc(var(--section-padding-y) * 2);
+	&-infoBox {
+		background-color: var(--color-secondary);
+		padding: calc(var(--padding-base) * 2) var(--padding-base);
+		border-radius: var(--border-radius-small);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		h2,
+		h3 {
+			text-align: center;
+		}
+
+		h3 {
+			margin-bottom: calc(var(--margin-base) * 2);
+		}
+		.bigText {
+			max-width: 650px;
+		}
+
+		.listCourses {
+			margin-left: auto;
+			margin-right: auto;
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 2rem;
+			max-width: 80%;
+			margin-bottom: var(--margin-base);
+
+			@include tablet {
+				max-width: 100%;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1.25rem;
+				row-gap: 2.5rem;
+			}
+			@include mobile {
+				max-width: 100%;
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+			}
+
+			.articleLink {
+				border-radius: var(--border-radius);
+				position: relative;
+			}
+
+			article {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+				box-shadow: rgba(0, 0, 0, 1) 0px 3px 6px 0px;
+				padding: calc(var(--padding-base) / 2);
+				border-radius: var(--border-radius);
+				transition: all var(--transition-duration) linear;
+				position: relative;
+				overflow: hidden;
+				min-height: 280px;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 0;
+					background: var(--color-gradient);
+					transition: all var(--transition-duration);
+					border-bottom-left-radius: var(--border-radius);
+					border-bottom-right-radius: var(--border-radius);
+				}
+
+				img {
+					margin-bottom: var(--margin-base);
+				}
+
+				.title {
+					margin-bottom: calc(var(--margin-base) / 2);
+				}
+				.text {
+					margin-bottom: calc(var(--margin-base) / 2);
+				}
+				button {
+					color: #fff;
+				}
+
+				@include hover {
+					margin-top: -15px;
+				}
+				@include tablet {
+					height: 200px;
+				}
+			}
+		}
+	}
+	.allCourses {
+		cursor: pointer;
+		background: var(--color-gradient);
+		padding: 10px 15px;
+		border-radius: var(--border-radius-small);
+		color: #fff;
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		border: none;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.allCourses::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+		transform: skewX(-20deg);
+		animation: shiny 3s infinite;
+	}
+
+	@keyframes shiny {
+		0% {
+			left: -100%;
+		}
+		50% {
+			left: 100%;
+		}
+		100% {
+			left: 100%;
+		}
+	}
+
+	&-benefits {
+		background-color: transparent;
+
+		h2 {
+			margin-bottom: var(--margin-base);
+		}
+
+		.listCourses {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			@include tablet {
+				max-width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+
+				.articleLink {
+					width: 100%;
+
+					article {
+						flex-direction: row;
+						gap: 30px;
+
+						div {
+							text-align: left;
+						}
+					}
+				}
+			}
+			@include mobile {
+				max-width: 100%;
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+			}
+
+			article {
+				background-color: var(--color-secondary);
+			}
+		}
+	}
+	&-sub {
+		.h2 {
+			margin-bottom: 15px;
+		}
+		.description {
+			text-align: center;
+			max-width: 650px;
+			margin-bottom: 30px;
+		}
+
+		.articleLink {
+			article {
+				padding: 0;
+				padding-bottom: 15px;
+				border-radius: var(--border-radius-small);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+
+				@include tablet {
+					min-height: 150px;
+					height: 180px;
+				}
+				
+
+				.title {
+					width: 100%;
+					background: var(--color-gradient);
+					padding-block: 5px;
+				}
+				.text {
+					margin-bottom: 0;
+					padding-inline: 5px;
+				}
+				.price {
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+}

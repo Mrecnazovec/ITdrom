@@ -1,0 +1,30 @@
+:root {
+	--color-main: #1B1B1B;
+	--color-secondary: hsla(0, 0%, 100%, .07);
+	--color-color: #ff4fb0;
+	--color-white: #FFF;
+	--color-dark: #000;
+	--color-text: #FFF;
+
+	--color-gradient: linear-gradient(90deg, #6924ff,#ff6068,#feb14b);
+                                         
+
+	--border-radius: 20px;
+	--border-radius-small: 5px;
+
+	--font-family-base: 'Montserrat', 'IBM Plex Sans', sans-serif;
+
+	--container-width: 1240px;
+	--container-padding-x: 20px;
+
+	--padding-base: 30px;
+	--margin-base: var(--padding-base);
+
+	--section-padding-y: 25px;
+	--section-margin-y: var(--section-padding-y);
+
+	--button-height: 30px;
+
+	--transition-duration: 200ms;
+}
+
