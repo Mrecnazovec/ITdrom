@@ -53,6 +53,11 @@ const Header = () => {
 						</Link>
 					</li>
 					<li>
+						<Link href='/contact'>
+							<span>О нас</span>
+						</Link>
+					</li>
+					<li>
 						<Link href='/student'>
 							<Button text='Личный кабинет' />
 						</Link>

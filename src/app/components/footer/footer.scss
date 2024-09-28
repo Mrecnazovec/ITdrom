@@ -19,28 +19,39 @@ footer {
 		.flex {
 			display: flex;
 			justify-content: center;
-			align-items: center;
-			flex-direction: column;
 			gap: 15px;
+			@include mobile-s {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 			ul {
 				list-style-type: none;
 				padding-left: 0;
 				margin: 0;
 				text-align: center;
 				li {
-					&:not(:last-child){
+					text-align: left;
+					@include mobile-s {
+						text-align: center;
+					}
+					&:not(:last-child) {
 						margin-bottom: 15px;
 					}
 				}
 			}
 			.soc1als {
 				display: flex;
+				justify-content: center;
+				align-items: center;
 				gap: 15px;
 				height: fit-content;
 
 				img {
 					height: fit-content;
 				}
+			}
+			.footer-list {
 			}
 		}
 	}

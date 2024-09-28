@@ -110,8 +110,15 @@
 		font-size: 16px;
 		font-weight: bold;
 		text-align: center;
+		margin-bottom: var(--margin-base);
 	}
+	.formatted {
+		text-align: center;
 
+		&:not(:last-child) {
+			margin-bottom: var(--margin-base);
+		}
+	}
 	.allCourses::before {
 		content: '';
 		position: absolute;
@@ -194,12 +201,10 @@
 				flex-direction: column;
 				justify-content: space-between;
 
-
 				@include tablet {
 					min-height: 150px;
 					height: 180px;
 				}
-				
 
 				.title {
 					width: 100%;
@@ -212,6 +217,53 @@
 				}
 				.price {
 					padding: 5px 10px;
+				}
+			}
+		}
+	}
+	&-form {
+		background-color: transparent;
+
+		form {
+			width: 100%;
+			max-width: 60%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 0;
+
+			@include mobile {
+				max-width: 100%;
+			}
+
+			
+			label {
+				color: var(--color-white);
+				align-self: flex-start;
+				margin-bottom: 0;
+			}
+			input,
+			textarea {
+				width: 100%;
+				border-radius: var(--border-radius-small);
+				padding: 5px;
+			}
+			input {
+				height: 60px;
+			}
+			button {
+				@include reset-button;
+				align-self: flex-start;
+				cursor: pointer;
+				background: var(--color-gradient);
+				transition-duration: var(--transition-duration);
+
+				padding: 10px 15px;
+				border-radius: var(--border-radius-small);
+				color: var(--color-white);
+
+				@include hover {
+					opacity: 0.8;
 				}
 			}
 		}

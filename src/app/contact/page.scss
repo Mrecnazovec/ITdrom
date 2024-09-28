@@ -1,0 +1,36 @@
+@import '/src/app/styles/_mixins';
+@import '/src/app/styles/media';
+
+.contact {
+	&-main {
+		margin-bottom: var(--margin-base);
+		h2 {
+			margin-bottom: var(--margin-base);
+		}
+		a{
+			display: block;
+			margin-bottom: var(--margin-base);
+		}
+		
+	}
+
+	&-map {
+		padding-block: var(--margin-base);
+	}
+
+	&-pictures {
+		.pictures {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: var(--margin-base);
+			overflow-x: scroll;
+			max-width: 100%;
+
+			img {
+				width: 500px;
+				height: 300px;
+			}
+		}
+	}
+}

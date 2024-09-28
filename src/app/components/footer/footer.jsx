@@ -49,23 +49,28 @@ const Footer = () => {
 				<div className='flex'>
 					<ul>
 						<li>
-							<Link href='/'>О нас</Link>
+							<Link href='/contact'>О нас</Link>
 						</li>
 						<li>
-							<Link href='/'>Курсы</Link>
+							<Link href='/courses'>Курсы</Link>
 						</li>
 						<li>
 							<Link href='/#sub'>Подписки</Link>
 						</li>
 					</ul>
-					<div className='soc1als'>
-						<Link href='/'>
-							<Image src='/svg/inst.svg' width={30} height={30} alt=''></Image>
-						</Link>
-						<Link href=''>
-							<Image src='/svg/tg.svg' width={35} height={30} alt=''></Image>
-						</Link>
-					</div>
+					<ul className='footer-list'>
+						<li>
+							<Link href='/#feedback'>Написать</Link>
+						</li>
+						<li className='soc1als'>
+							<Link target='_blank' href='https://www.instagram.com/itdrom.uz/'>
+								<Image src='/svg/inst.svg' width={25} height={25} alt=''></Image>
+							</Link>
+							<Link href='/'>
+								<Image src='/svg/tg.svg' width={25} height={20} alt=''></Image>
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</footer>

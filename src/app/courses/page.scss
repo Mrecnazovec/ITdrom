@@ -59,12 +59,22 @@
 					}
 					.desc {
 						margin-bottom: calc(var(--margin-base) / 2);
+						@include fluid-text(16, 14)
+					}
+					.time {
+						margin-bottom: calc(var(--margin-base) / 2);
+					}
+
+					p {
+						span {
+							background: linear-gradient(90deg, #ff6068, #feb14b);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
 					}
 					button {
 						color: #fff;
 					}
-
-			
 				}
 			}
 		}

@@ -109,7 +109,6 @@ const Courses = () => {
 				'Изучите основы искусственного интеллекта и машинного обучения. Курс охватывает ключевые концепции, такие как алгоритмы обучения, нейронные сети, обработка естественного языка и компьютерное зрение. Вы получите практические навыки в разработке и внедрении AI-решений, которые помогут вам решать реальные задачи и повышать эффективность бизнес-процессов.',
 			time: '6 месяцев',
 		},
-
 	]
 	return (
 		<main className='courses'>
@@ -122,13 +121,22 @@ const Courses = () => {
 
 								<div className='flex-box'>
 									<div className='text-bo'>
-										<p className='title'>{item.title}</p>
+										<p className='title'>
+											<span>{item.title}</span>
+										</p>
 										<p className='text'>{item.text}</p>
-										<p className='price'>Цена: {item.price} сумм/месяц</p>
+										<p className='price'>
+											<span>Цена:</span> {item.price} сумм/месяц
+										</p>
 									</div>
 									<div className='price-box'>
 										<p className='desc'>{item.description}</p>
-										<p className='time'>Длительность обучения: {item.time}</p>
+										<p className='time'>
+											<span>Длительность обучения:</span> {item.time}
+										</p>
+										<p className='format'>
+											<span>Формат обучения:</span> Онлайн/оффлайн
+										</p>
 									</div>
 								</div>
 							</article>
